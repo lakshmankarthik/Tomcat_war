@@ -23,4 +23,25 @@
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+  <profile>
+   <id>local</id>
+   <build>
+	<plugins>
+	<plugin>
+		<groupId>org.apache.tomcat.maven</groupId>
+		<artifactId>tomcat7-maven-plugin</artifactId>
+		<version>2.2</version>
+		<configuration>
+      <url>http://15.207.72.241:8080/manager/text</url>
+      <server>Tomcat</server>
+      <path>/local</path>
+     </configuration>
+	</plugin>
+	</plugins>
+   </build>
+  </profile>
+ </profiles>
+
 </project>
